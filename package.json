@@ -1,0 +1,58 @@
+{
+  "name": "nodejs-rabbitmq",
+  "version": "1.0.0",
+  "description": "A demonstration Node.js project that integrates RabbitMQ for message queueing",
+  "main": "src/index.js",
+  "type": "module",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "producer": "node src/producer.js",
+    "consumer": "node src/consumer.js",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --testTimeout=10000",
+    "test:watch": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll"
+  },
+  "keywords": [
+    "nodejs",
+    "rabbitmq",
+    "message-queue",
+    "microservices"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.8",
+    "dotenv": "^16.6.0",
+    "express": "^5.1.0",
+    "jest": "^30.0.3",
+    "morgan": "^1.10.0",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  },
+  "jest": {
+    "transform": {},
+    "extensionsToTreatAsEsm": [],
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
+    ],
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
+  }
+}
