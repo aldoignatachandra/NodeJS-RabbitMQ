@@ -39,26 +39,26 @@ A demonstration project showcasing how to integrate RabbitMQ with Node.js for me
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/aldoignatachandra/NodeJS-RabbitMQ.git
 cd nodejs-rabbitmq
 
 # Install dependencies
-npm install
+npm install / yarn install
 
 # Setup environment variables
 cp .env.example .env
 
 # Start RabbitMQ using Docker
-docker-compose up -d
+docker compose up -d
 
 # Run the Express server
-npm start
+npm start / yarn start
 
 # Run the producer standalone
-npm run producer
+npm run producer / yarn producer
 
 # Run the consumer standalone
-npm run consumer
+npm run consumer / yarn consumer
 ```
 
 # 🔄 RabbitMQ Architecture
